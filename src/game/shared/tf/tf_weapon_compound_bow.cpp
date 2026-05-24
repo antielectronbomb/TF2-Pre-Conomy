@@ -190,6 +190,10 @@ void CTFCompoundBow::PrimaryAttack( void )
 	if ( m_flNextPrimaryAttack > gpGlobals->curtime )
 		return;
 
+	// Check if user is currently mid-air and has drawn an arrow. If true, do not fire an arrow until the user touches the ground.
+	if (!(GetFlags() & FL_ONGROUND) && m_Shared.InCond( TF_COND_AIMING ) )
+		return;
+
 	if ( m_bNoFire )
 		return;
 

@@ -15316,7 +15316,7 @@ void CTFPlayer::DoTauntAttack( void )
 		if ( iTauntAttack == TAUNTATK_SNIPER_ARROW_STAB_IMPALE )
 		{
 			m_iTauntAttack = TAUNTATK_SNIPER_ARROW_STAB_KILL;
-			m_flTauntAttackTime = gpGlobals->curtime + 1.30;
+			m_flTauntAttackTime = gpGlobals->curtime + 0.05;
 		}
 		else if ( iTauntAttack == TAUNTATK_ENGINEER_ARM_IMPALE )
 		{
