@@ -2132,6 +2132,7 @@ float CBaseObject::GetConstructionMultiplier( void )
 	if( pBuilder )
 	{
 		flMultiplier += pBuilder->GetObjectBuildSpeedMultiplier( ObjectType(), m_bCarryDeploy );
+		flMultiplier += pBuilder->GetObjectBuildSpeedMultiplier( ObjectType(), m_bMiniBuilding );
 	}
 
 	return flMultiplier;
